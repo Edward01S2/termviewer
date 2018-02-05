@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.edwardindustries.termviewer.CourseEditor"
+    tools:showIn="@layout/activity_course_editor">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:id="@+id/tvEditCCode"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@id/etEditCCode"
+            android:text="Code"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditCCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditCCode"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="Course Code"/>
+
+        <TextView
+            android:id="@+id/tvEditCName"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/etEditCName"
+            android:layout_alignParentLeft="true"
+            android:text="Name"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditCName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditCName"
+            android:layout_below="@id/etEditCCode"
+            android:ems="10"
+            android:hint="Course Name"/>
+
+        <TextView
+            android:id="@+id/tvEditCStart"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBaseline="@id/etEditCStart"
+            android:text="Start"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditCStart"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditCStart"
+            android:ems="10"
+            android:inputType="date"
+            android:layout_below="@id/etEditCName"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/startDate"/>
+
+        <CheckBox
+            android:id="@+id/cbStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/etEditCStart"
+            android:text="Alert"
+            android:layout_alignBaseline="@id/etEditCStart"/>
+
+        <TextView
+            android:id="@+id/tvEditCEnd"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBaseline="@id/etEditCEnd"
+            android:text="End"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditCEnd"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditCEnd"
+            android:ems="10"
+            android:inputType="date"
+            android:layout_below="@id/etEditCStart"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/endDate"/>
+
+        <CheckBox
+            android:id="@+id/cbEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/etEditCEnd"
+            android:text="Alert"
+            android:layout_alignBaseline="@id/etEditCEnd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etEditCEnd">
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:text="Status"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinStatus"
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/tvStatus">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

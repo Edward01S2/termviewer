@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/imageMentor"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_person"
+        android:tint="@color/colorAccent"
+        android:layout_marginRight="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageMentor">
+        <TextView
+            android:id="@+id/tvMentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Smith"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvMentPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="803-444-4444"
+            android:textSize="15sp"
+            android:layout_below="@id/tvMentName"/>
+
+        <TextView
+            android:id="@+id/tvMentEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvMentPhone"
+            android:layout_alignBaseline="@id/tvMentPhone"
+            android:text="example@gmail.com"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

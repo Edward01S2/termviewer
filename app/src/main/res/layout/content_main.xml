@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TERMS"
+        android:layout_centerInParent="true"
+        android:width="250dp"
+        android:layout_marginBottom="15dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:onClick="toTerms"
+        android:paddingVertical="15dp"/>
+
+
+
+</RelativeLayout>
+

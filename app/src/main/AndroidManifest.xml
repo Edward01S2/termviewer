@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.edwardindustries.termviewer">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".Provider"
+            android:authorities="com.edwardindustries.termviewer.provider"
+            android:exported="false" />
+
+        <activity
+            android:name=".TermsActivity"
+            android:label="Terms"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TermEditor"
+            android:label="@string/title_activity_term_editor"
+            android:parentActivityName=".TermDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.TermDetail" />
+        </activity>
+        <activity
+            android:name=".TermDetail"
+            android:label="@string/title_activity_term_detail"
+            android:parentActivityName=".TermsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.TermsActivity" />
+        </activity>
+        <activity
+            android:name=".CoursesActivity"
+            android:label="@string/title_activity_courses"
+            android:parentActivityName=".TermDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.TermDetail" />
+        </activity>
+        <activity
+            android:name=".CourseDetail"
+            android:label="@string/title_activity_course_detail"
+            android:parentActivityName=".CoursesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.CoursesActivity" />
+        </activity>
+        <activity
+            android:name=".CourseEditor"
+            android:label="@string/title_activity_course_editor"
+            android:parentActivityName=".CourseDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.CourseDetail" />
+        </activity>
+        <activity
+            android:name=".AssessActivity"
+            android:label="@string/title_activity_assess"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MentorActivity"
+            android:label="@string/title_activity_mentor"
+            android:parentActivityName=".CourseDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.CourseDetail" />
+        </activity>
+        <activity
+            android:name=".MentorEditor"
+            android:label="@string/title_activity_mentor_editor"
+            android:parentActivityName=".MentorActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.MentorActivity" />
+        </activity>
+        <activity
+            android:name=".NotesActivity"
+            android:label="@string/title_activity_notes"
+            android:parentActivityName=".CourseDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.CourseDetail" />
+        </activity>
+        <activity
+            android:name=".NoteDetail"
+            android:label="@string/title_activity_note_detail"
+            android:parentActivityName=".NotesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.NotesActivity" />
+        </activity>
+        <activity
+            android:name=".NoteEditor"
+            android:label="@string/title_activity_note_editor"
+            android:parentActivityName=".NoteDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.NoteDetail" />
+        </activity>
+        <activity
+            android:name=".AssessDetail"
+            android:label="@string/title_activity_assess_detail"
+            android:parentActivityName=".AssessActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.AssessActivity" />
+        </activity>
+        <activity
+            android:name=".AssessEditor"
+            android:label="@string/title_activity_assess_editor"
+            android:parentActivityName=".AssessDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.edwardindustries.termviewer.AssessDetail" />
+        </activity>
+    </application>
+
+</manifest>

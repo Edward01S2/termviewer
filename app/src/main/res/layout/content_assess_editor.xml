@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.edwardindustries.termviewer.AssessEditor"
+    tools:showIn="@layout/activity_assess_editor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:id="@+id/tvEditATitle"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@id/etEditATitle"
+            android:text="Title"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditATitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditATitle"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="Assessment Title"/>
+
+
+        <TextView
+            android:id="@+id/tvADue"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBaseline="@id/etEditADue"
+            android:text="Due"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditADue"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvADue"
+            android:ems="10"
+            android:inputType="date"
+            android:layout_below="@id/etEditATitle"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/startDate"/>
+
+        <CheckBox
+            android:id="@+id/cbDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/etEditADue"
+            android:text="Alert"
+            android:layout_alignBaseline="@id/etEditADue"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etEditADue">
+            <TextView
+                android:id="@+id/tvAType"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:text="Type"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinAType"
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/tvAType">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

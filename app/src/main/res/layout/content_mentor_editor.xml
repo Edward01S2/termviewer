@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.edwardindustries.termviewer.MentorEditor"
+    tools:showIn="@layout/activity_mentor_editor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:id="@+id/tvEditMentorName"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@id/etEditMentorName"
+            android:text="Name"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditMentorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditMentorName"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="Mentor Name"/>
+
+        <TextView
+            android:id="@+id/tvEditMentorPhone"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/etEditMentorPhone"
+            android:layout_alignParentLeft="true"
+            android:text="Phone"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditMentorPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditMentorPhone"
+            android:layout_below="@id/etEditMentorName"
+            android:ems="10"
+            android:hint="XXX-XXX-XXXX"
+            android:inputType="phone"/>
+
+        <TextView
+            android:id="@+id/tvEditMentorEmail"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBaseline="@id/etEditMentorEmail"
+            android:text="Email"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/etEditMentorEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditMentorEmail"
+            android:ems="10"
+            android:layout_below="@id/etEditMentorPhone"
+            android:hint="example@gmail.com"
+            android:inputType="textEmailAddress"/>
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
